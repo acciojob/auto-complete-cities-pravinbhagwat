@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import React from "react";
-import './../styles/App.css';
+import React, { useState, useEffect } from "react";
 
 const App = () => {
   const suggestions = ["apple", "banana", "cherry", "date", "elderberry", "fig"]
@@ -20,9 +18,10 @@ const App = () => {
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
+
   return (
     <div>
-        <h1>Search item</h1>
+      <h1>Search item</h1>
       <input type="text" value={query} onChange={handleInputChange} />
       <ul>
         {filteredSuggestions.map((suggestion) => (
@@ -30,7 +29,7 @@ const App = () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
